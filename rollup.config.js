@@ -17,7 +17,7 @@ export default {
   plugins: [
     svelte({
       // enable run-time checks when not in production
-      dev: !production,
+      dev: true,
       // we'll extract any component CSS out into
       // a separate file — better for performance
       css: css => {
@@ -35,7 +35,7 @@ export default {
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
-    !production && livereload('public'),
+    livereload('public'),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
